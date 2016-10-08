@@ -1,0 +1,6 @@
+ 3 def prime_fib(prime_fib)
+  arr = (1..prime_fib).to_a.reverse.each { |i| prime_fib += prime_fib * (i - 1)}
+  prime_fib.to_s.split(//).map(&:to_i).inject(:+)
+  end
+
+  p prime_fib(5)
